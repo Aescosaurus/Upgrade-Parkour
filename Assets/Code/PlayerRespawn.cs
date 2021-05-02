@@ -24,8 +24,10 @@ public class PlayerRespawn
 
 	void Update()
 	{
-		if( transform.position.y < respawnY )
+		respawnRetry.Update( Time.deltaTime );
+		if( transform.position.y < respawnY && respawnRetry.IsDone() )
 		{
+			respawnRetry.Reset();
 			// SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
 
 			var moveScr = GetComponent<PlayerMove>();
@@ -75,6 +77,7 @@ public class PlayerRespawn
 	[SerializeField] float respawnY = -5.0f;
 	[SerializeField] RangeI savePartCount = new RangeI( 15,22 );
 	[SerializeField] RangeI respawnPartCount = new RangeI( 15,22 );
+	Timer respawnRetry = new Timer( 1.0f );
 
 	Vector3 safeSpot;
 	Quaternion safeRot;
