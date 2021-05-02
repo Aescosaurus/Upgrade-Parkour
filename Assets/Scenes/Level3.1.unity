@@ -1061,7 +1061,7 @@ MonoBehaviour:
   interactAxis: Interact1
   interactMsg: '[E] Jetpack'
   targetScene: Level4.1
-  prefAdd: can_jetpack
+  prefAdd: has_jetpack
 --- !u!23 &906006935
 MeshRenderer:
   m_ObjectHideFlags: 0

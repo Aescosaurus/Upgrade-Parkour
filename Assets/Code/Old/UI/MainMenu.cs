@@ -45,8 +45,13 @@ public class MainMenu
 		// todo reset player save itenz
 
 		PlayerPrefs.SetInt( "save_scene",1 );
+
 		PlayerPrefs.SetInt( "has_shotgun",0 );
 		PlayerPrefs.SetInt( "has_sprint",0 );
+		PlayerPrefs.SetInt( "has_grapple",0 );
+		PlayerPrefs.SetInt( "has_jetpack",0 );
+
+		PlayerPrefs.Save();
 
 		Continue();
 	}

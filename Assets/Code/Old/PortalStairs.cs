@@ -13,6 +13,7 @@ public class PortalStairs
 		// base.Interact();
 
 		PlayerPrefs.SetInt( "curfloor",PlayerPrefs.GetInt( "curfloor",0 ) + 1 );
+		PlayerPrefs.Save();
 
 		SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex );
 	}
