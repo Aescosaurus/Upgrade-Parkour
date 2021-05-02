@@ -78,7 +78,7 @@ public class GrapplingHook
 				{
 					var hitPos = ( hitObj.position + hitOffset );
 					var knockbackDir = hitPos - transform.position;
-					playerMoveScr.ApplyForceMove( knockbackDir.normalized * knockbackForce );
+					playerMoveScr.ApplyForceMove( knockbackDir.normalized * knockbackForce * Time.deltaTime );
 
 					curTrail.SetPosition( 0,transform.position );
 					curTrail.SetPosition( 1,hitPos );

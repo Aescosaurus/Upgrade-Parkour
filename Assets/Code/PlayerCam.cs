@@ -21,6 +21,8 @@ public class PlayerCam
 
 	void Update()
 	{
+		if( PauseMenu.IsOpen() ) return;
+
 		// if( Input.GetKeyDown( KeyCode.Escape ) )
 		// {
 		// 	Cursor.lockState = CursorLockMode.None;
@@ -34,11 +36,6 @@ public class PlayerCam
 
 		aim = new Vector2( Input.GetAxis( "Mouse X" ),
 			Input.GetAxis( "Mouse Y" ) ) * sensitivity;
-	}
-
-	void FixedUpdate()
-	{
-		if( PauseMenu.IsOpen() ) return;
 
 		// cam.transform.eulerAngles = new Vector3(
 		// 	cam.eulerAngles.x - aim.y * rotationSpeed * Time.deltaTime,
